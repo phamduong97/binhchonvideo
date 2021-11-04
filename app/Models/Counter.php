@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Counter extends Model
+{
+	protected $table = "counter";
+	protected $fillable = [
+
+		'ip_address', 
+		'last_visit'
+		
+	];
+
+}
