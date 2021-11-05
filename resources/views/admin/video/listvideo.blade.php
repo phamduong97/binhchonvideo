@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('content') 
-<table class="table table-bordered table-hover " style="margin-top:3px">
+<table class="table table-bordered table-hover " style="margin-top:3px;border:">
     <tr class="table table-success">
         <th width="10px" style="text-align: center">Mã video</th>
         <th style="text-align: center">Tiêu đề</th>
@@ -22,11 +22,11 @@
                 </video>
             </td>
             <td style="text-align: center">
-                <form action="#" method="POST" style="padding-top: 30px">
+                <form action="" method="POST" style="padding-top: 30px">
                     <a class="btn btn-info" href="#">Xem chi tiết</a>
-                    <a class="btn btn-primary" href="#">Sửa</a>
+                    <a class="btn btn-primary" href="{{ route('admin.edit-video',$row['id_video'])}}">Sửa</a>
                     @csrf
-                    <a class="btn btn-danger" href="#">Xóa</a>
+                    <a class="btn btn-danger" href="{{ route('admin.delete-video',$row['id_video']) }}">Xóa</a>
                 </form>
             </td>
             <td>{{$row->created_at}}</td>

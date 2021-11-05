@@ -75,7 +75,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>['CheckAdmin','loca
 	Route::get('danh-sach-video','VideoController@ListVideo')->name('list-video');
 	Route::post('luu-video','VideoController@SaveVideo')->name('save-video');
 	Route::get('sua-video/{id}','VideoController@EditVideo')->name('edit-video');
-	Route::post('cap-nhat-video','VideoController@UpdateVideo')->name('update-video');
+	Route::post('cap-nhat-video/{id}','VideoController@UpdateVideo')->name('update-video');
 	Route::get('xóa-video/{id}','VideoController@DeleteVideo')->name('delete-video');
 
     // -----------------------------Quản lý danh mục tin tức-----------------------------------------	
